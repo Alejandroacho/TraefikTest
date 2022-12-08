@@ -7,9 +7,15 @@ api:
 # Docker configuration backend
 providers:
   docker:
-    watch: true
-    exposedByDefault: true
+    exposedByDefault: false
 
 # Traefik Logging
 log:
-  level: INFO
+  level: DEBUG
+
+# Entrypoint
+entryPoints:
+  web:
+    address: ":80"
+  websecure:
+    address: ":443"
