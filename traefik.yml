@@ -19,3 +19,16 @@ entryPoints:
     address: ":80"
   websecure:
     address: ":443"
+
+# Certificates
+certificatesResolvers:
+  catResolver:
+    acme:
+      email: contact@mail.com
+      storage: acme.json
+      dnsChallenge:
+        provider: digitalocean
+        delayBeforeCheck: "0"
+      # httpChallenge:
+      #   entryPoint: web
+      # tlsChallenge: true
